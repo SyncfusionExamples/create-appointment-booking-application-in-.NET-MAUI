@@ -16,9 +16,27 @@ namespace AppointmentBooking
             InitializeComponent();
             this.BindingContext = AppShell.Appointments;
             var upcomingEvents = (this.BindingContext as AppointmentsInfo).Appointments.Where(x => (x as DoctorInfo).AppointmentTime > DateTime.Now).ToList();
+            CheckAppointemnts(upcomingEvents);
+
             this.listView.ItemsSource = upcomingEvents;
 
         }
+
+        private void CheckAppointemnts(List<DoctorInfo> upcomingEvents)
+        {
+            if (upcomingEvents.Count == 0)
+            {
+                this.noAppointment.IsVisible = true;
+                this.listView.IsVisible = false;
+
+            }
+            else
+            {
+                this.noAppointment.IsVisible = false;
+                this.listView.IsVisible = true;
+            }
+        }
+
         private void Button_Clicked(object sender, EventArgs e)
         {
             var button = sender as Button;
@@ -38,6 +56,7 @@ namespace AppointmentBooking
                     pastAppointmentBordeer.Color = Colors.Transparent;
 
                 }
+                CheckAppointemnts(upcomingEvents);
                 this.listView.ItemsSource = upcomingEvents; 
 
             }
@@ -54,6 +73,7 @@ namespace AppointmentBooking
                     upcomingAppointmentBorder.Color = Colors.Transparent;
 
                 }
+                CheckAppointemnts(pastAppointments);
                 this.listView.ItemsSource = pastAppointments;
 
 

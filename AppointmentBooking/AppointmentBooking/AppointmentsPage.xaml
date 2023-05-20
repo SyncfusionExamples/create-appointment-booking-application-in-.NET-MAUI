@@ -31,6 +31,7 @@
             </VerticalStackLayout>
             </Grid>
             <Grid  Grid.Row="1" >
+                <Label x:Name="noAppointment" FontAttributes="Bold" VerticalOptions="Start"  HorizontalOptions="Center" Margin="20" Text="No upcoming hospital visit."/>
                 <listView:SfListView x:Name="listView" Grid.Row="1" VerticalOptions="Start"     
                      ItemSize="100" >
                     <listView:SfListView.ItemTemplate>
