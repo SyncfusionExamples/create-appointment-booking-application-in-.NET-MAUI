@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+               xmlns:popup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
+             NavigationPage.HasNavigationBar="False" NavigationPage.HasBackButton="true"
+             xmlns:local="clr-namespace:AppointmentBooking" WidthRequest="700"
+               xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar"
+              xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+             x:Class="AppointmentBooking.DoctorPage">
+    <ContentPage.BindingContext>
+        <local:DoctorInfoRepository />
+    </ContentPage.BindingContext>
+    <Grid RowDefinitions="0.1*,0.9*">
+        <Grid ColumnDefinitions="0.2*,*" VerticalOptions="Start" Background="{StaticResource Primary}">
+            <Button Text="Back" TextColor="White" VerticalOptions="Center"/>
+            <Label Text="Doctors" Grid.Column="1" TextColor="White" VerticalOptions="Center" FontAttributes="Bold"/>
+        </Grid>
+    <Grid Grid.Row="1" RowDefinitions="0.1*,0.9*">
+            <HorizontalStackLayout VerticalOptions="Start" HeightRequest="30"  HorizontalOptions="Center">
+                <Label Text="Select a date" VerticalOptions="Start" Padding="5" TextColor="Black"/>
+                <Button x:Name="CalendarButton" Padding="5"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                Text="Show Calendar"
+                Clicked="CalendarButton_Clicked"/>
+                <popup:SfPopup x:Name="popup" ShowCloseButton="False" ShowFooter="False" ShowHeader="False"
+                       HeightRequest="350" >
+                    <popup:SfPopup.ContentTemplate>
+                        <DataTemplate>
+                            <calendar:SfCalendar ActionButtonClicked="calendar_ActionButtonClicked" SelectionChanged="calendar_SelectionChanged" SelectionMode="Single"
+                                                 Padding="5" WidthRequest="300" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="350"
+                             x:Name="calendar"
+                             ShowActionButtons="True" />
+                        </DataTemplate>
+                    </popup:SfPopup.ContentTemplate>
+                    <popup:SfPopup.PopupStyle>
+                        <popup:PopupStyle CornerRadius="0"/>
+                    </popup:SfPopup.PopupStyle>
+                </popup:SfPopup>
+
+            </HorizontalStackLayout>
+            <listView:SfListView x:Name="listView" Grid.Row="1" VerticalOptions="Start" ItemTapped="listView_ItemTapped"    
+                   ItemsSource="{Binding DoctorInfo}"   ItemSize="80" >
+                <listView:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10" ColumnDefinitions="auto,0.8*">
+                            <ImageButton VerticalOptions="Start" Source="{Binding Image}" Padding="10" HeightRequest="80" WidthRequest="80"/>
+                            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" >
+                            <Label Text="{Binding Name}" FontAttributes="Bold"  />
+                                <Label Text="{Binding Details}"  />
+                            </VerticalStackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </listView:SfListView.ItemTemplate>
+            </listView:SfListView>
+
+        </Grid>
+    </Grid>
+</ContentPage>

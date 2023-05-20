@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AppointmentBooking" 
+              xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+             
+             x:Class="AppointmentBooking.AppointmentsPage">
+ 
+    <ContentPage.Content>
+        <Grid RowDefinitions="60,*">
+            <Grid.Resources>
+                <DataTemplate x:Key="AgendaHeaderTemplate">
+                    <Grid>
+                        <Image Aspect="Fill" Source="{Binding Converter={StaticResource MonthToImageConverter}}"/>
+                        <Label x:Name="label" HorizontalOptions="Start" VerticalOptions="Start" TextColor="Black" FontSize="16" Padding="55, 20, 0, 0" Text="{Binding StringFormat='{0:MMMM yyyy}'}"/>
+                    </Grid>
+                </DataTemplate>
+            </Grid.Resources>
+            <Grid ColumnDefinitions="0.5*,0.5*" HeightRequest="50" VerticalOptions="Start">
+            <VerticalStackLayout  Background="Transparent">
+                <Button x:Name="Upcoming" BorderColor="Transparent" TextColor="Black" Background="Transparent" Margin="5" Text="Upcoming appointments" Clicked="Button_Clicked"/>
+                <BoxView Color="{StaticResource Primary}" x:Name="UpcomingBorder"
+             HeightRequest="2"
+             HorizontalOptions="Fill" />
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Column="1">
+                <Button  x:Name="Past" BorderColor="Transparent" TextColor="Black" Background="Transparent" Margin="5" Text="Past appointments" Clicked="Button_Clicked"/>
+                <BoxView Color="Transparent" x:Name="PastBordeer"
+             HeightRequest="2"
+             HorizontalOptions="Fill" />
+            </VerticalStackLayout>
+            </Grid>
+            <Grid Background="#F6F6F6" Grid.Row="1" >
+                <listView:SfListView x:Name="listView" Grid.Row="1" VerticalOptions="Start"     
+                     ItemSize="80" >
+                    <listView:SfListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10" ColumnDefinitions="auto,0.8*">
+                                <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" >
+                                    <Label Text="{Binding Name}" FontAttributes="Bold"  />
+                                    <Label Text="{Binding Details}"  />
+                                    <Label Text="{Binding AppointmentTime}"  />
+
+
+                                </VerticalStackLayout>
+                            </Grid>
+                        </DataTemplate>
+                    </listView:SfListView.ItemTemplate>
+                </listView:SfListView>
+
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

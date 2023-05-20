@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="AppointmentBooking.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui" Shell.FlyoutWidth="200"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:AppointmentBooking" WidthRequest="350"
+    Shell.FlyoutBehavior="Locked" Shell.FlyoutItemIsVisible="True"  >
+
+    <FlyoutItem Title="Home"  >
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="home" />
+    </FlyoutItem>
+  
+    <FlyoutItem Title="Appointments" >
+        <ShellContent  ContentTemplate="{DataTemplate local:AppointmentsPage}" Route="appointments"/>
+    </FlyoutItem>
+
+
+
+</Shell>

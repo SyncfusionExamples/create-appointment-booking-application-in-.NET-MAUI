@@ -1,0 +1,63 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" WidthRequest="700"
+               x:Class="AppointmentBooking.BookingAppointment" NavigationPage.HasNavigationBar="False" NavigationPage.HasBackButton="true"
+               xmlns:popup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
+             xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar"
+             xmlns:local="clr-namespace:AppointmentBooking"
+  BackgroundColor="WhiteSmoke" >
+    <Grid RowDefinitions="0.1*,0.8*">
+        <Image Source="{Binding Image}" ></Image>
+    <Grid Grid.Row="1" HorizontalOptions="Start" VerticalOptions="Start" HeightRequest="500" WidthRequest="350">
+        <Border x:Name="border"  Stroke="WhiteSmoke" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="White" HorizontalOptions="Center" Margin="0" Padding="0">
+            <Grid Background="#f5eeff">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.1*"/>
+                    <RowDefinition Height="0.35*"/>
+                    <RowDefinition Height="0.1*"/>
+                    <RowDefinition Height="0.35*"/>
+                    <RowDefinition Height="0.1*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center" FontSize="20" BackgroundColor="White" TextColor="Black" Text="Book an Appointment"/>
+                <calendar:SfCalendar Grid.Row="1" x:Name="appointmentBooking" EnablePastDates="False" AllowViewNavigation="False" SelectionChanged="AppointmentBooking_SelectionChanged" BackgroundColor="White" NavigationDirection="Horizontal">
+                    <calendar:SfCalendar.HeaderView>
+                        <calendar:CalendarHeaderView Background="#f5eeff"/>
+                    </calendar:SfCalendar.HeaderView>
+                    <calendar:SfCalendar.MonthView>
+                        <calendar:CalendarMonthView NumberOfVisibleWeeks="2">
+                            <calendar:CalendarMonthView.HeaderView>
+                                <calendar:CalendarMonthHeaderView Background="#f5eeff"/>
+                            </calendar:CalendarMonthView.HeaderView>
+                        </calendar:CalendarMonthView>
+                    </calendar:SfCalendar.MonthView>
+                </calendar:SfCalendar>
+                <Label Grid.Row="2" x:Name="label" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center" FontSize="20" TextColor="Black" />
+                <Grid Grid.Row="3">
+                    <FlexLayout x:Name="flexLayout" Wrap="Wrap"
+                        JustifyContent="SpaceAround" AlignItems="Center" VerticalOptions="Center" HorizontalOptions="Center">
+                        <FlexLayout.Resources>
+                            <Style TargetType="Button">
+                                <Setter  Property="TextColor" Value="Black"/>
+                                <Setter  Property="BackgroundColor" Value="White"/>
+                            </Style>
+                        </FlexLayout.Resources>
+                        <Button Text="10:00 AM" Clicked="SlotBooking_Changed"/>
+                        <Button Text="10:30 AM" Clicked="SlotBooking_Changed"/>
+                        <Button Text="11:00 AM" Clicked="SlotBooking_Changed"/>
+                        <Button Text="11:30 AM" Clicked="SlotBooking_Changed"/>
+                        <Button Text="02:00 PM" Clicked="SlotBooking_Changed"/>
+                        <Button Text="02:30 PM" Clicked="SlotBooking_Changed"/>
+                        <Button Text="03:00 PM" Clicked="SlotBooking_Changed"/>
+                        <Button Text="03:30 PM" Clicked="SlotBooking_Changed"/>
+                        <Button Text="04:00 PM" Clicked="SlotBooking_Changed"/>
+                    </FlexLayout>
+                </Grid>
+                <Grid Grid.Row="4">
+                    <Button  Text="Book Appointment" BackgroundColor="#6200EE" HorizontalOptions="Center" Clicked="AppointmentBooking" VerticalOptions="Center" WidthRequest="150"/>
+                </Grid>
+                <popup:SfPopup x:Name="popup"/>
+            </Grid>
+        </Border>
+    </Grid>
+    </Grid>
+
+</ContentPage>
