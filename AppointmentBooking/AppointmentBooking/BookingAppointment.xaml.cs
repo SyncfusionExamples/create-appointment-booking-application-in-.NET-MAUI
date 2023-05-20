@@ -33,7 +33,8 @@ namespace AppointmentBooking
         /// <param name="parent">Parent view of calendar control.</param>
         private void InitializeCalendar(Syncfusion.Maui.Calendar.SfCalendar calendar)
         {
-            calendar.MaximumDate = DateTime.Now.Date.AddMonths(3);
+            calendar.MinimumDate = DateTime.Now.Date.AddDays(-1);
+            calendar.MaximumDate = DateTime.Now.Date.AddDays(7);
             calendar.SelectedDate = DateTime.Now.Date;
         }
 
@@ -120,11 +121,11 @@ namespace AppointmentBooking
             var doctorInfo = this.BindingContext as DoctorInfo;
             doctorInfo.AppointmentTime = dateTime;
             AppShell.Appointments.Appointments.Add(doctorInfo);
-
+            AppShell.IsAppointments = true;
             App.Current.MainPage = new NavigationPage();
             var appShell = new AppShell();
             App.Current.MainPage.Navigation.PushAsync(appShell);
-
+            AppShell.IsAppointments = false;
             //await Task.Delay(1000);
 
             
@@ -170,6 +171,11 @@ namespace AppointmentBooking
                 unPressedbutton.TextColor = Colors.Black;
                 unPressedbutton.Background = Colors.White;
             }
+        }
+
+        private void ContentPage_NavigatedTo(object sender, NavigatedToEventArgs e)
+        {
+             //Shell.Current.GoToAsync("appointments");
         }
     }
 }

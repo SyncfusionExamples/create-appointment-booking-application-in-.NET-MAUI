@@ -30,20 +30,24 @@
              HorizontalOptions="Fill" />
             </VerticalStackLayout>
             </Grid>
-            <Grid Background="#F6F6F6" Grid.Row="1" >
+            <Grid  Grid.Row="1" >
                 <listView:SfListView x:Name="listView" Grid.Row="1" VerticalOptions="Start"     
-                     ItemSize="80" >
+                     ItemSize="100" >
                     <listView:SfListView.ItemTemplate>
                         <DataTemplate>
-                            <Grid Padding="10" ColumnDefinitions="auto,0.8*">
-                                <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" >
-                                    <Label Text="{Binding Name}" FontAttributes="Bold"  />
-                                    <Label Text="{Binding Details}"  />
-                                    <Label Text="{Binding AppointmentTime}"  />
+                            <VerticalStackLayout IsClippedToBounds="True" Background="#f6f6f6" Margin="10">
+                                <Grid Padding="10" ColumnDefinitions="0.2*,0.8*">
+                                    <ImageButton VerticalOptions="Start" Source="{Binding Image}" Padding="10" HeightRequest="80" WidthRequest="80"/>
+                                    <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" >
+                                        <Label Text="{Binding Name}" FontAttributes="Bold"  />
+                                        <Label Text="{Binding Details}"  />
+                                        <Label Text="{Binding AppointmentTime}"  />
 
+                                    </VerticalStackLayout>
+                                </Grid>
 
-                                </VerticalStackLayout>
-                            </Grid>
+                            </VerticalStackLayout>
+                         
                         </DataTemplate>
                     </listView:SfListView.ItemTemplate>
                 </listView:SfListView>

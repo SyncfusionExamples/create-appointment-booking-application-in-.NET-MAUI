@@ -3,34 +3,44 @@
                x:Class="AppointmentBooking.BookingAppointment" NavigationPage.HasNavigationBar="False" NavigationPage.HasBackButton="true"
                xmlns:popup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
              xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar"
-             xmlns:local="clr-namespace:AppointmentBooking"
+             xmlns:local="clr-namespace:AppointmentBooking"  NavigatedTo="ContentPage_NavigatedTo"
   BackgroundColor="WhiteSmoke" >
-    <Grid RowDefinitions="0.1*,0.8*">
-        <Image Source="{Binding Image}" ></Image>
-    <Grid Grid.Row="1" HorizontalOptions="Start" VerticalOptions="Start" HeightRequest="500" WidthRequest="350">
+       
+        <Grid Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="500" WidthRequest="350">
         <Border x:Name="border"  Stroke="WhiteSmoke" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="White" HorizontalOptions="Center" Margin="0" Padding="0">
             <Grid Background="#f5eeff">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="0.3*"/>
+                    <RowDefinition Height="0.25*"/>
                     <RowDefinition Height="0.1*"/>
-                    <RowDefinition Height="0.35*"/>
-                    <RowDefinition Height="0.1*"/>
-                    <RowDefinition Height="0.35*"/>
-                    <RowDefinition Height="0.1*"/>
+                    <RowDefinition Height="0.25*"/>
+                    <RowDefinition Height="0.15*"/>
                 </Grid.RowDefinitions>
-                <Label Grid.Row="0" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center" FontSize="20" BackgroundColor="White" TextColor="Black" Text="Book an Appointment"/>
-                <calendar:SfCalendar Grid.Row="1" x:Name="appointmentBooking" EnablePastDates="False" AllowViewNavigation="False" SelectionChanged="AppointmentBooking_SelectionChanged" BackgroundColor="White" NavigationDirection="Horizontal">
+                <VerticalStackLayout>
+                    <Label  HorizontalTextAlignment="Center" Padding="5"  VerticalTextAlignment="Center" FontSize="20" BackgroundColor="White" TextColor="Black" Text="Book an Appointment"/>
+
+                    <Grid Padding="10" ColumnDefinitions="0.2*,0.8*" >
+                        <ImageButton VerticalOptions="Start" Source="{Binding Image}" Padding="10" HeightRequest="80" WidthRequest="80"/>
+                        <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" >
+                            <Label Text="{Binding Name}" FontAttributes="Bold"  />
+                            <Label Text="{Binding Details}"  />
+                        </VerticalStackLayout>
+                    </Grid>
+                
+                </VerticalStackLayout>
+                <calendar:SfCalendar Grid.Row="1" Background="white" x:Name="appointmentBooking" EnablePastDates="False" AllowViewNavigation="False" SelectionChanged="AppointmentBooking_SelectionChanged" BackgroundColor="White" NavigationDirection="Horizontal">
                     <calendar:SfCalendar.HeaderView>
-                        <calendar:CalendarHeaderView Background="#f5eeff"/>
+                        <calendar:CalendarHeaderView Background="white"/>
                     </calendar:SfCalendar.HeaderView>
                     <calendar:SfCalendar.MonthView>
-                        <calendar:CalendarMonthView NumberOfVisibleWeeks="2">
-                            <calendar:CalendarMonthView.HeaderView>
-                                <calendar:CalendarMonthHeaderView Background="#f5eeff"/>
+                        <calendar:CalendarMonthView NumberOfVisibleWeeks="1">
+                                <calendar:CalendarMonthView.HeaderView>
+                                    <calendar:CalendarMonthHeaderView Background="white"/>
                             </calendar:CalendarMonthView.HeaderView>
                         </calendar:CalendarMonthView>
                     </calendar:SfCalendar.MonthView>
                 </calendar:SfCalendar>
-                <Label Grid.Row="2" x:Name="label" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center" FontSize="20" TextColor="Black" />
+                <Label Grid.Row="2" x:Name="label" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center" FontSize="18" TextColor="Black" />
                 <Grid Grid.Row="3">
                     <FlexLayout x:Name="flexLayout" Wrap="Wrap"
                         JustifyContent="SpaceAround" AlignItems="Center" VerticalOptions="Center" HorizontalOptions="Center">
@@ -52,12 +62,11 @@
                     </FlexLayout>
                 </Grid>
                 <Grid Grid.Row="4">
-                    <Button  Text="Book Appointment" BackgroundColor="#6200EE" HorizontalOptions="Center" Clicked="AppointmentBooking" VerticalOptions="Center" WidthRequest="150"/>
+                    <Button  Margin="10" Text="Book Appointment" BackgroundColor="#6200EE" HorizontalOptions="Center" Clicked="AppointmentBooking" VerticalOptions="Center" WidthRequest="150"/>
                 </Grid>
                 <popup:SfPopup x:Name="popup"/>
             </Grid>
         </Border>
-    </Grid>
     </Grid>
 
 </ContentPage>

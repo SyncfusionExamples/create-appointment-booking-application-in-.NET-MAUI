@@ -74,8 +74,8 @@ namespace AppointmentBooking
         internal void AddPastAppointments()
         {
             Appointments = new ObservableCollection<DoctorInfo>();
-            Appointments.Add(new DoctorInfo() { Name = "Dr. Peter", Details = "Dentist", AppointmentTime = DateTime.Now.Date.AddDays(-1).AddHours(9)});
-            Appointments.Add(new DoctorInfo() { Name = "Dr. John", Details = "Dentist", AppointmentTime = DateTime.Now.Date.AddDays(-8).AddHours(11) });
+            Appointments.Add(new DoctorInfo() { Name = "Dr. Peter", Details = "Dentist", AppointmentTime = DateTime.Now.Date.AddDays(-1).AddHours(9),Image="profile.png"});
+            Appointments.Add(new DoctorInfo() { Name = "Dr. John", Details = "Dentist", AppointmentTime = DateTime.Now.Date.AddDays(-8).AddHours(11), Image = "profile.png" });
         }
     }
 }

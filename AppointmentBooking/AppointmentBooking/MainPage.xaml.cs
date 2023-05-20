@@ -11,7 +11,10 @@ public partial class MainPage : ContentPage
     private void ImageButton_Clicked(object sender, EventArgs e)
     {
         App.Current.MainPage = new NavigationPage();
-        App.Current.MainPage.Navigation.PushAsync(new DoctorPage());
+        var doctorPage = new DoctorPage();
+        var bindingContext = new DoctorInfoRepository((sender as ImageButton).AutomationId.ToString());
+        doctorPage.BindingContext = bindingContext;
+        App.Current.MainPage.Navigation.PushAsync(doctorPage);
     }
 }
 
