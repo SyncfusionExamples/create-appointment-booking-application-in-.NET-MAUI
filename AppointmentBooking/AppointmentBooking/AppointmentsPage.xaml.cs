@@ -14,7 +14,7 @@ namespace AppointmentBooking
         public AppointmentsPage()
         {
             InitializeComponent();
-            this.BindingContext = AppShell.Appointments;
+            this.BindingContext = App.Appointments;
             var upcomingEvents = (this.BindingContext as AppointmentsInfo).Appointments.Where(x => (x as DoctorInfo).AppointmentTime > DateTime.Now).ToList();
             CheckAppointemnts(upcomingEvents);
 

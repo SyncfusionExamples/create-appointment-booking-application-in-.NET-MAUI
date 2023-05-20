@@ -120,12 +120,11 @@ namespace AppointmentBooking
             var appointmentList = new AppointmentsInfo();
             var doctorInfo = this.BindingContext as DoctorInfo;
             doctorInfo.AppointmentTime = dateTime;
-            AppShell.Appointments.Appointments.Add(doctorInfo);
-            AppShell.IsAppointments = true;
+            App.Appointments.Appointments.Add(doctorInfo);
+            App.IsAppointments = true;
             App.Current.MainPage = new NavigationPage();
             var appShell = new AppShell();
             App.Current.MainPage.Navigation.PushAsync(appShell);
-            AppShell.IsAppointments = false;
             //await Task.Delay(1000);
 
             

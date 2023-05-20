@@ -36,7 +36,7 @@
                      ItemSize="100" >
                     <listView:SfListView.ItemTemplate>
                         <DataTemplate>
-                            <VerticalStackLayout IsClippedToBounds="True" Background="#f6f6f6" Margin="10">
+                            <VerticalStackLayout IsClippedToBounds="True" Background="#f6f6f6" Margin="5">
                                 <Grid Padding="10" ColumnDefinitions="0.2*,0.8*">
                                     <ImageButton VerticalOptions="Start" Source="{Binding Image}" Padding="10" HeightRequest="80" WidthRequest="80"/>
                                     <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" >

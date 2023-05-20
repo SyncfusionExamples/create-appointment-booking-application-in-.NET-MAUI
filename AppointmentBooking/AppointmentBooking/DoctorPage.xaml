@@ -11,16 +11,16 @@
         <local:DoctorInfoRepository />
     </ContentPage.BindingContext>-->
     <Grid RowDefinitions="0.1*,0.9*">
-        <Grid ColumnDefinitions="0.2*,*" VerticalOptions="Start" Background="{StaticResource Primary}">
+        <Grid ColumnDefinitions="0.1*,*" VerticalOptions="Start" Background="{StaticResource Primary}">
             <Button Text="Back" TextColor="White" VerticalOptions="Center"/>
-            <Label Text="Doctors" Grid.Column="1" TextColor="White" VerticalOptions="Center" FontSize="16" FontAttributes="Bold"/>
+            <Label Text="Doctors" Grid.Column="1"  TextColor="White" VerticalOptions="Center" FontSize="20" FontAttributes="None"/>
         </Grid>
-    <Grid Grid.Row="1" RowDefinitions="0.1*,0.9*">
-            <HorizontalStackLayout VerticalOptions="Start" HeightRequest="30"  HorizontalOptions="Center">
-                <Label Text="Select a date" VerticalOptions="Start" Padding="5" TextColor="Black"/>
-                <Button x:Name="CalendarButton" Padding="5"
+    <Grid Grid.Row="1" RowDefinitions="0.2*,0.8*">
+            <HorizontalStackLayout VerticalOptions="Start" HeightRequest="50"  HorizontalOptions="Center">
+                <Label Text="Select a date" FontSize="18" VerticalOptions="Center" Padding="5" TextColor="Black"/>
+                <Button x:Name="CalendarButton" Padding="5"  HeightRequest="40" WidthRequest="100"
                 HorizontalOptions="Center"
-                VerticalOptions="Start"
+                VerticalOptions="Center"
                 Text="Show Calendar"
                 Clicked="CalendarButton_Clicked"/>
                 <popup:SfPopup x:Name="popup" ShowCloseButton="False" ShowFooter="False" ShowHeader="False"

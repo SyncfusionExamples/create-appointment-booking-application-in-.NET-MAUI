@@ -19,7 +19,7 @@ namespace AppointmentBooking
         public DoctorPage()
         {
             InitializeComponent();
-            CalendarButton.Text = DateTime.Now.Date.ToString("yyyy'-'MM'-'dd");
+            CalendarButton.Text = DateTime.Now.Date.ToString("yyyy'/'MM'/'dd");
             CheckDoctorAvailability();
 
         }
@@ -39,11 +39,11 @@ namespace AppointmentBooking
             var calendar = sender as SfCalendar;
             if (e.NewValue == null)
             {
-                this.CalendarButton.Text = ((DateTime)e.OldValue).ToString("yyyy'-'MM'-'dd");
+                this.CalendarButton.Text = ((DateTime)e.OldValue).ToString("yyyy'/'MM'/'dd");
             }
             else
             {
-                this.CalendarButton.Text = ((DateTime)e.NewValue).ToString("yyyy'-'MM'-'dd");
+                this.CalendarButton.Text = ((DateTime)e.NewValue).ToString("yyyy'/'MM'/'dd");
                 this.SelectedDate = (DateTime)calendar.SelectedDate;
             }
 

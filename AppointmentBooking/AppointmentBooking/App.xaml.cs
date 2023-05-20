@@ -7,8 +7,13 @@ public partial class App : Application
 		InitializeComponent();
 
 		MainPage = new AppShell();
+        Appointments = new AppointmentsInfo();
+        IsAppointments = false;
 
     }
+    public static AppointmentsInfo Appointments { get; set; }
+    public static bool IsAppointments { get; set; }
+
 
     protected override Window CreateWindow(IActivationState activationState)
     {
