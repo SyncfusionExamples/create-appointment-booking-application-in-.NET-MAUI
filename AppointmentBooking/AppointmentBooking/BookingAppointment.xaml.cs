@@ -114,22 +114,15 @@ namespace AppointmentBooking
             popup.Message = text;
             popup.Show();
 
-            await Task.Delay(2000);
+            await Task.Delay(1000);
             popup.IsOpen = false;
 
-            var appointmentList = new AppointmentsInfo();
             var doctorInfo = this.BindingContext as DoctorInfo;
             doctorInfo.AppointmentTime = dateTime;
             App.Appointments.Appointments.Add(doctorInfo);
-            App.IsAppointments = true;
+
             App.Current.MainPage = new NavigationPage();
-            var appShell = new AppShell();
-            App.Current.MainPage.Navigation.PushAsync(appShell);
-            //await Task.Delay(1000);
-
-            
-
-           // await Shell.Current.GoToAsync("//appointments");
+            App.Current.MainPage.Navigation.PushAsync(new AppShell());
         }
 
         /// <summary>
@@ -172,9 +165,10 @@ namespace AppointmentBooking
             }
         }
 
-        private void ContentPage_NavigatedTo(object sender, NavigatedToEventArgs e)
+        private void Button_Clicked(object sender, EventArgs e)
         {
-             //Shell.Current.GoToAsync("appointments");
+            App.Current.MainPage = new NavigationPage();
+            App.Current.MainPage.Navigation.PushAsync(new AppShell());
         }
     }
 }

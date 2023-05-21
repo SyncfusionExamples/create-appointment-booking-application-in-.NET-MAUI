@@ -2,69 +2,69 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppointmentBooking.MainPage">
-    <Grid RowDefinitions="0.1*,0.9*">
-        <Label Text="Top Specialists" FontSize="16" Margin="10" VerticalOptions="End" FontAttributes="Bold"/>
+    <Grid RowDefinitions="0.1*,0.9*" Background="#f5eeff">
+        <Label Text="Select Specialists" FontSize="16" Margin="10" VerticalOptions="End" FontAttributes="Bold"/>
         <Grid Grid.Row="1" ColumnDefinitions="*,*,*" RowDefinitions="0.3*,0.3*,0.3*">
         <Border VerticalOptions="Center"  Stroke="WhiteSmoke" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="White" HorizontalOptions="Center" Margin="0" Padding="0">
             <VerticalStackLayout Margin="10">
                     <ImageButton AutomationId="General"  x:Name="General" VerticalOptions="Start" Source="profile.png" Clicked="ImageButton_Clicked" HeightRequest="100" WidthRequest="100" />
-                <Label Text="General Physician" />
+                <Label Text="General Physician" FontAttributes="Bold"/>
             </VerticalStackLayout>
         </Border>
 
         <Border VerticalOptions="Center"  Stroke="WhiteSmoke" Grid.Row="0" Grid.Column="1" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="White" HorizontalOptions="Center" Margin="0" Padding="0">
             <VerticalStackLayout Margin="10">
                     <ImageButton AutomationId="skin" VerticalOptions="Start" Source="profile.png" Clicked="ImageButton_Clicked" HeightRequest="100" WidthRequest="100" />
-                    <Label Text="Skin Specialist" />
+                    <Label Text="Skin Specialist" FontAttributes="Bold" />
             </VerticalStackLayout>
         </Border>
 
         <Border VerticalOptions="Center"  Stroke="WhiteSmoke" Grid.Row="0" Grid.Column="2" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="White" HorizontalOptions="Center" Margin="0" Padding="0">
             <VerticalStackLayout Margin="10">
                     <ImageButton AutomationId="cardiology" VerticalOptions="Start" Source="profile.png" Clicked="ImageButton_Clicked" HeightRequest="100" WidthRequest="100" />
-                <Label Text="Cardiology" />
+                    <Label Text="Cardiology" FontAttributes="Bold"/>
             </VerticalStackLayout>
         </Border>
 
         <Border VerticalOptions="Center"  Stroke="WhiteSmoke" Grid.Row="1" Grid.Column="0" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="White" HorizontalOptions="Center" Margin="0" Padding="0">
             <VerticalStackLayout Margin="10">
                     <ImageButton AutomationId="neurology" VerticalOptions="Start" Source="profile.png" Clicked="ImageButton_Clicked" HeightRequest="100" WidthRequest="100" />
-                    <Label Text="Neurology" />
+                    <Label Text="Neurology" FontAttributes="Bold" />
             </VerticalStackLayout>
         </Border>
 
         <Border VerticalOptions="Center"  Stroke="WhiteSmoke" Grid.Row="1" Grid.Column="1" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="White" HorizontalOptions="Center" Margin="0" Padding="0">
             <VerticalStackLayout Margin="10">
                     <ImageButton AutomationId="pediatrician" VerticalOptions="Start" Source="profile.png" Clicked="ImageButton_Clicked" HeightRequest="100" WidthRequest="100" />
-                    <Label Text="Pediatrician" />
+                    <Label Text="Pediatrician" FontAttributes="Bold" />
             </VerticalStackLayout>
         </Border>
 
         <Border VerticalOptions="Center"   Stroke="WhiteSmoke" Grid.Row="1" Grid.Column="2" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="White" HorizontalOptions="Center" Margin="0" Padding="0">
             <VerticalStackLayout Margin="10">
                     <ImageButton AutomationId="eye" VerticalOptions="Start" Source="profile.png" Clicked="ImageButton_Clicked" HeightRequest="100" WidthRequest="100" />
-                    <Label Text="Eye Specialist" />
+                    <Label Text="Eye Specialist" FontAttributes="Bold" />
             </VerticalStackLayout>
         </Border>
 
         <Border VerticalOptions="Center"  Stroke="WhiteSmoke" Grid.Row="2" Grid.Column="0" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="White" HorizontalOptions="Center" Margin="0" Padding="0">
             <VerticalStackLayout Margin="10">
                     <ImageButton AutomationId="dermatologist" VerticalOptions="Start" Source="profile.png" Clicked="ImageButton_Clicked" HeightRequest="100" WidthRequest="100" />
-                    <Label Text="Dermatologist" />
+                    <Label Text="Dermatologist" FontAttributes="Bold" />
             </VerticalStackLayout>
         </Border>
 
         <Border VerticalOptions="Center"  Stroke="WhiteSmoke" Grid.Row="2" Grid.Column="1" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="White" HorizontalOptions="Center" Margin="0" Padding="0">
             <VerticalStackLayout Margin="10">
                     <ImageButton AutomationId="psychiatrist" VerticalOptions="Start" Source="profile.png" Clicked="ImageButton_Clicked" HeightRequest="100" WidthRequest="100" />
-                    <Label Text="Psychiatrist" />
+                    <Label Text="Psychiatrist" FontAttributes="Bold"/>
             </VerticalStackLayout>
         </Border>
 
         <Border VerticalOptions="Center"   Stroke="WhiteSmoke" Grid.Row="2" Grid.Column="2" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="White" HorizontalOptions="Center" Margin="0" Padding="0">
             <VerticalStackLayout Margin="10">
                     <ImageButton AutomationId="gynecologist" VerticalOptions="Start" Source="profile.png" Clicked="ImageButton_Clicked" HeightRequest="100" WidthRequest="100" />
-                    <Label Text="Gynecologist" />
+                    <Label Text="Gynecologist" FontAttributes="Bold" />
             </VerticalStackLayout>
         </Border>
 

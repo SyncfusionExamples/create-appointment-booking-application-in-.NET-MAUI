@@ -7,28 +7,26 @@
                xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar"
               xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              x:Class="AppointmentBooking.DoctorPage">
-    <!--<ContentPage.BindingContext>
-        <local:DoctorInfoRepository />
-    </ContentPage.BindingContext>-->
     <Grid RowDefinitions="0.1*,0.9*">
         <Grid ColumnDefinitions="0.1*,*" VerticalOptions="Start" Background="{StaticResource Primary}">
-            <Button Text="Back" TextColor="White" VerticalOptions="Center"/>
+            <Button Text="Back" TextColor="White" VerticalOptions="Center"  Clicked="Button_Clicked_1"/>
             <Label Text="Doctors" Grid.Column="1"  TextColor="White" VerticalOptions="Center" FontSize="20" FontAttributes="None"/>
         </Grid>
-    <Grid Grid.Row="1" RowDefinitions="0.2*,0.8*">
+        <Grid Grid.Row="1" RowDefinitions="0.1*,0.9*">
             <HorizontalStackLayout VerticalOptions="Start" HeightRequest="50"  HorizontalOptions="Center">
-                <Label Text="Select a date" FontSize="18" VerticalOptions="Center" Padding="5" TextColor="Black"/>
+                <Label Text="Select a date" FontSize="18" VerticalOptions="Start" Padding="5" TextColor="Black"/>
                 <Button x:Name="CalendarButton" Padding="5"  HeightRequest="40" WidthRequest="100"
                 HorizontalOptions="Center"
-                VerticalOptions="Center"
+                VerticalOptions="Start"
                 Text="Show Calendar"
                 Clicked="CalendarButton_Clicked"/>
-                <popup:SfPopup x:Name="popup" ShowCloseButton="False" ShowFooter="False" ShowHeader="False"
-                       HeightRequest="350" >
+                <popup:SfPopup x:Name="popup" Background="red" ShowCloseButton="False" ShowFooter="False" ShowHeader="False"
+                       HeightRequest="380" >
                     <popup:SfPopup.ContentTemplate>
                         <DataTemplate>
                             <calendar:SfCalendar MinimumDate="{Binding MinimumDate}" MaximumDate="{Binding MaximumDate}" ActionButtonClicked="calendar_ActionButtonClicked" SelectionChanged="calendar_SelectionChanged" SelectionMode="Single"
-                                                 Padding="5" WidthRequest="300" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="350"
+                                                WidthRequest="300" VerticalOptions="Start" HorizontalOptions="Center"
+                                                 HeightRequest="360"
                              x:Name="calendar"
                              ShowActionButtons="True" />
                         </DataTemplate>
@@ -41,23 +39,24 @@
             </HorizontalStackLayout>
             <Grid Grid.Row="1" >
                 <Label x:Name="NoDoctors" Text="Looks like there is no doctor available, please change date." TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <listView:SfListView x:Name="listView"   VerticalOptions="Start"    
-                   ItemsSource="{Binding DoctorInfo}"   ItemSize="180" >
-                <listView:SfListView.ItemTemplate>
-                    <DataTemplate>
-                            <VerticalStackLayout IsClippedToBounds="True" Background="#f6f6f6" Margin="10">
-                        <Grid Padding="10" ColumnDefinitions="auto,0.8*">
-                            <ImageButton VerticalOptions="Start" Source="{Binding Image}" Padding="10" HeightRequest="80" WidthRequest="80"/>
-                            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" >
-                            <Label Text="{Binding Name}" FontAttributes="Bold"  />
-                                <Label Text="{Binding Details}"  />
-                            </VerticalStackLayout>
-                        </Grid>
+                <listView:SfListView x:Name="listView" Margin="5,0,0,0"  VerticalOptions="Start"    
+                   ItemsSource="{Binding DoctorInfo}"   ItemSize="160" >
+                    <listView:SfListView.ItemTemplate>
+                        <DataTemplate>
+                            <VerticalStackLayout IsClippedToBounds="True" Background="#f5eeff" Margin="5">
+                                <Grid Padding="10" ColumnDefinitions="0.2*,0.8*" >
+                                    <ImageButton InputTransparent="True" VerticalOptions="Start" Background="#f5eeff" Source="{Binding Image}" HeightRequest="80" WidthRequest="80"/>
+                                    <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" >
+                                        <Label Text="{Binding Name}" FontAttributes="Bold"  />
+                                        <Label Text="{Binding Department}"  />
+                                        <Label Text="{Binding Details}"  />
+                                    </VerticalStackLayout>
+                                </Grid>
                                 <Button VerticalOptions="Center" CornerRadius="5" HorizontalOptions="Start" Margin="10,0" Text="Book hospital visit" BindingContext="{Binding}" Clicked="Button_Clicked" />
                             </VerticalStackLayout>
                         </DataTemplate>
-                </listView:SfListView.ItemTemplate>
-            </listView:SfListView>
+                    </listView:SfListView.ItemTemplate>
+                </listView:SfListView>
             </Grid>
         </Grid>
     </Grid>

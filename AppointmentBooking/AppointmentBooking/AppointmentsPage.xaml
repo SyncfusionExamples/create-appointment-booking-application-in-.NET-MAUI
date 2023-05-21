@@ -7,48 +7,46 @@
              x:Class="AppointmentBooking.AppointmentsPage">
  
     <ContentPage.Content>
-        <Grid RowDefinitions="60,*">
-            <Grid.Resources>
-                <DataTemplate x:Key="AgendaHeaderTemplate">
-                    <Grid>
-                        <Image Aspect="Fill" Source="{Binding Converter={StaticResource MonthToImageConverter}}"/>
-                        <Label x:Name="label" HorizontalOptions="Start" VerticalOptions="Start" TextColor="Black" FontSize="16" Padding="55, 20, 0, 0" Text="{Binding StringFormat='{0:MMMM yyyy}'}"/>
-                    </Grid>
-                </DataTemplate>
-            </Grid.Resources>
-            <Grid ColumnDefinitions="0.5*,0.5*" HeightRequest="50" VerticalOptions="Start">
+        <Grid RowDefinitions="52,*">
+            <Grid ColumnDefinitions="0.5*,0.5*" HeightRequest="52" VerticalOptions="Start">
             <VerticalStackLayout  Background="Transparent">
-                <Button x:Name="Upcoming" BorderColor="Transparent" TextColor="Black" Background="Transparent" Margin="5" Text="Upcoming appointments" Clicked="Button_Clicked"/>
+                <Button x:Name="Upcoming" BorderColor="Transparent" HeightRequest="50" TextColor="Black" Background="Transparent"  Text="Upcoming appointments" Clicked="Button_Clicked"/>
                 <BoxView Color="{StaticResource Primary}" x:Name="UpcomingBorder"
              HeightRequest="2"
              HorizontalOptions="Fill" />
             </VerticalStackLayout>
             <VerticalStackLayout Grid.Column="1">
-                <Button  x:Name="Past" BorderColor="Transparent" TextColor="Black" Background="Transparent" Margin="5" Text="Past appointments" Clicked="Button_Clicked"/>
+                    <Button  x:Name="Past" BorderColor="Transparent" HeightRequest="50"  TextColor="Black" Background="Transparent" Text="Past appointments" Clicked="Button_Clicked"/>
                 <BoxView Color="Transparent" x:Name="PastBordeer"
              HeightRequest="2"
              HorizontalOptions="Fill" />
             </VerticalStackLayout>
             </Grid>
-            <Grid  Grid.Row="1" >
-                <Label x:Name="noAppointment" FontAttributes="Bold" VerticalOptions="Start"  HorizontalOptions="Center" Margin="20" Text="No upcoming hospital visit."/>
+            <Grid  Grid.Row="1" x:Name="listGrid" Background="#f5eeff" >
+                <Label  x:Name="noAppointment" FontAttributes="Bold" VerticalOptions="Center"  HorizontalOptions="Center" Margin="20" Text="No upcoming hospital visit."/>
                 <listView:SfListView x:Name="listView" Grid.Row="1" VerticalOptions="Start"     
                      ItemSize="100" >
                     <listView:SfListView.ItemTemplate>
                         <DataTemplate>
-                            <VerticalStackLayout IsClippedToBounds="True" Background="#f6f6f6" Margin="5">
-                                <Grid Padding="10" ColumnDefinitions="0.2*,0.8*">
-                                    <ImageButton VerticalOptions="Start" Source="{Binding Image}" Padding="10" HeightRequest="80" WidthRequest="80"/>
+                            <Border  StrokeShape="RoundRectangle 10,10,10,10" >
+                            <VerticalStackLayout Background="#3F95C2" IsClippedToBounds="True"  Margin="5">
+                                <Grid Padding="5" ColumnDefinitions="0.2*,0.8*">
+                                    <ImageButton InputTransparent="True" VerticalOptions="Start" Background="#3F95C2" Source="{Binding Image}" Padding="10" HeightRequest="80" WidthRequest="80"/>
                                     <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" >
-                                        <Label Text="{Binding Name}" FontAttributes="Bold"  />
-                                        <Label Text="{Binding Details}"  />
-                                        <Label Text="{Binding AppointmentTime}"  />
-
+                                        <Label Text="{Binding Name}" FontAttributes="Bold"  TextColor="White" />
+                                        <Label Text="{Binding Department}"  TextColor="White" />
+                                        <Label  TextColor="White">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Appointment Time: "/>
+                                                    <Span Text="{Binding AppointmentTime}"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
                                     </VerticalStackLayout>
                                 </Grid>
-
                             </VerticalStackLayout>
-                         
+                            </Border>
                         </DataTemplate>
                     </listView:SfListView.ItemTemplate>
                 </listView:SfListView>

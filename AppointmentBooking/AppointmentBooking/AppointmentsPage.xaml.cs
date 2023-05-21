@@ -28,7 +28,6 @@ namespace AppointmentBooking
             {
                 this.noAppointment.IsVisible = true;
                 this.listView.IsVisible = false;
-
             }
             else
             {
@@ -93,9 +92,11 @@ namespace AppointmentBooking
 
         internal void AddPastAppointments()
         {
-            Appointments = new ObservableCollection<DoctorInfo>();
-            Appointments.Add(new DoctorInfo() { Name = "Dr. Peter", Details = "Dentist", AppointmentTime = DateTime.Now.Date.AddDays(-1).AddHours(9),Image="profile.png"});
-            Appointments.Add(new DoctorInfo() { Name = "Dr. John", Details = "Dentist", AppointmentTime = DateTime.Now.Date.AddDays(-8).AddHours(11), Image = "profile.png" });
+            Appointments = new ObservableCollection<DoctorInfo>
+            {
+                new DoctorInfo() { Name = "Dr. Peter", Department = "Dentist", AppointmentTime = DateTime.Now.Date.AddDays(-1).AddHours(9), Image = "profile2.png" },
+                new DoctorInfo() { Name = "Dr. John", Department = "Dentist", AppointmentTime = DateTime.Now.Date.AddDays(-8).AddHours(11), Image = "profile3.png" }
+            };
         }
     }
 }

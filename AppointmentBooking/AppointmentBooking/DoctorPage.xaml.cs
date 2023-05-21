@@ -31,6 +31,7 @@ namespace AppointmentBooking
 
         private void calendar_ActionButtonClicked(object sender, Syncfusion.Maui.Calendar.CalendarSubmittedEventArgs e)
         {
+            CheckDoctorAvailability();
             this.popup.IsOpen = false;
         }
 
@@ -46,9 +47,6 @@ namespace AppointmentBooking
                 this.CalendarButton.Text = ((DateTime)e.NewValue).ToString("yyyy'/'MM'/'dd");
                 this.SelectedDate = (DateTime)calendar.SelectedDate;
             }
-
-            CheckDoctorAvailability();
-
         }
 
         private void CheckDoctorAvailability()
@@ -71,84 +69,11 @@ namespace AppointmentBooking
             App.Current.MainPage = new NavigationPage();
             App.Current.MainPage.Navigation.PushAsync(new BookingAppointment() { BindingContext = button.BindingContext });
         }
-    }
 
-    public class DoctorInfo 
-    {
-        public string Name { get; set; }
-
-        public string Details { get; set; }
-
-        public string Image { get; set; }
-
-        public DateTime AppointmentTime { get; set; }
-
-    }
-
-    public class DoctorInfoRepository
-    {
-        public ObservableCollection<DoctorInfo> DoctorInfo { get; set; }
-
-        public DateTime MinimumDate { get; set; } = DateTime.Now.Date;
-
-        public DateTime MaximumDate { get; set; } = DateTime.Now.Date.AddDays(7);
-
-        public DoctorInfoRepository(string specialist)
+        private void Button_Clicked_1(object sender, EventArgs e)
         {
-            
-            GenerateBookInfo();
-            if(specialist == "General")
-            {
-                GeneralPhysicianBookInfo();
-            }
-
-            if (specialist == "skin")
-            {
-            }
-
-            if (specialist == "cardiology")
-            {
-            }
-
-            if (specialist == "neurology")
-            {
-            }
-
-            if (specialist == "pediatrician")
-            {
-            }
-
-            if (specialist == "eye")
-            {
-            }
-
-            if (specialist == "dermatologist")
-            {
-            }
-
-            if (specialist == "psychiatrist")
-            {
-            }
-
-            if (specialist == "gynecologist")
-            {
-            }
-
-
-        }
-
-        internal void GenerateBookInfo()
-        {
-            DoctorInfo = new ObservableCollection<DoctorInfo>();
-            DoctorInfo.Add(new DoctorInfo() { Name = "Dr. Peter", Details = "Dentist \nMBBS \n10 years experience",Image = "profile.png" });
-            DoctorInfo.Add(new DoctorInfo() { Name = "Dr. John", Details = "Dentist \nMBBS \n10 years experience", Image = "profile.png" });
-        }
-
-        internal void GeneralPhysicianBookInfo()
-        {
-            DoctorInfo = new ObservableCollection<DoctorInfo>();
-            DoctorInfo.Add(new DoctorInfo() { Name = "Dr. Peter", Details = "General Physician \nMBBS \n10 years experience", Image = "profile.png" });
-            DoctorInfo.Add(new DoctorInfo() { Name = "Dr. John", Details = "General Physician \nMBBS \n10 years experience", Image = "profile.png" });
+            App.Current.MainPage = new NavigationPage();
+            App.Current.MainPage.Navigation.PushAsync(new AppShell());
         }
     }
 }

@@ -49,6 +49,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\people_circle1.png" />
+	  <None Remove="Resources\Images\people_circle14.png" />
+	  <None Remove="Resources\Images\people_circle23.png" />
+	  <None Remove="Resources\Images\people_circle25.png" />
+	  <None Remove="Resources\Images\people_circle26.png" />
 	  <None Remove="Resources\Images\profile.png" />
 	</ItemGroup>
 

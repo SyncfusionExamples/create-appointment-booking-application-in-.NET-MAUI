@@ -6,15 +6,4 @@ public partial class AppShell : Shell
 	{
 		InitializeComponent();
     }
-
-
-    private void Shell_Loaded(object sender, EventArgs e)
-    {
-       if(App.IsAppointments)
-        {
-           // Shell.Current.GoToAsync("appointments");
-            App.IsAppointments = false;
-
-        }
-    }
 }
