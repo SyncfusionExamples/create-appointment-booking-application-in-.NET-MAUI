@@ -3,11 +3,11 @@
     x:Class="AppointmentBooking.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui" Shell.FlyoutWidth="200"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:AppointmentBooking" WidthRequest="350"
-    Shell.FlyoutBehavior="Locked" Shell.FlyoutItemIsVisible="True"  >
+    xmlns:local="clr-namespace:AppointmentBooking" WidthRequest="350" FlyoutBackgroundColor="Red"
+   Shell.FlyoutBehavior="{OnPlatform Android=Flyout,WinUI=Locked,MacCatalyst=Locked,iOS=Flyout}" Shell.FlyoutItemIsVisible="True"  >
 
     <FlyoutItem Title="Home"  >
-        <ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="home" />
+        <ShellContent  ContentTemplate="{DataTemplate local:MainPage}" Route="home" />
     </FlyoutItem>
   
     <FlyoutItem Title="Appointments" >
