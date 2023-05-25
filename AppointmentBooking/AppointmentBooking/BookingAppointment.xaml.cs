@@ -30,10 +30,9 @@ namespace AppointmentBooking
         /// Initialize the calendar.
         /// </summary>
         /// <param name="calendar">Calendar instance.</param>
-        /// <param name="parent">Parent view of calendar control.</param>
         private void InitializeCalendar(Syncfusion.Maui.Calendar.SfCalendar calendar)
         {
-            calendar.MinimumDate = DateTime.Now.Date.AddDays(-1);
+            calendar.MinimumDate = DateTime.Now.Date;
             calendar.MaximumDate = DateTime.Now.Date.AddDays(7);
             calendar.SelectedDate = DateTime.Now.Date;
         }

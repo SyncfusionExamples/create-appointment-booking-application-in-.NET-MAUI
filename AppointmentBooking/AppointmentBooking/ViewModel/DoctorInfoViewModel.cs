@@ -21,7 +21,7 @@ namespace AppointmentBooking
             switch (specialist)
             {
                 case "General":
-                    department = "General Physician";
+                    department = "Physician";
                     break;
                 case "skin":
                     department = "Skin Specialist";

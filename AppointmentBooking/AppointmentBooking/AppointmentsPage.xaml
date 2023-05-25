@@ -22,7 +22,7 @@
              HorizontalOptions="Fill" />
             </VerticalStackLayout>
             </Grid>
-            <Grid  Grid.Row="1" x:Name="listGrid" Background="#f5eeff" >
+            <Grid  Grid.Row="1" x:Name="listGrid" Background="#D1DAE7" >
                 <Label  x:Name="noAppointment" FontAttributes="Bold" VerticalOptions="Center"  HorizontalOptions="Center" Margin="20" Text="No upcoming hospital visit."/>
                 <listView:SfListView x:Name="listView" Grid.Row="1" VerticalOptions="Start"     
                      ItemSize="100" >

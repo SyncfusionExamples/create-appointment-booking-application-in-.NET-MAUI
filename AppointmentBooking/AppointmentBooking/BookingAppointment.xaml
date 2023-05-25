@@ -1,18 +1,18 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" WidthRequest="700"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" WidthRequest="500"
                x:Class="AppointmentBooking.BookingAppointment" NavigationPage.HasNavigationBar="False" NavigationPage.HasBackButton="true"
                xmlns:popup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
              xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar"
              xmlns:local="clr-namespace:AppointmentBooking"  
-  BackgroundColor="WhiteSmoke" >
+ Background="#D1DAE7">
     <Grid RowDefinitions="0.1*,0.9*">
         <Grid ColumnDefinitions="0.1*,*" VerticalOptions="Start" Background="{StaticResource Primary}">
             <Button Text="Back" TextColor="White" VerticalOptions="Center" Clicked="Button_Clicked"/>
             <Label Text="Book an Appointment" Grid.Column="1"  TextColor="White" VerticalOptions="Center" FontSize="20" FontAttributes="None"/>
         </Grid>
         <Grid Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="500" WidthRequest="350">
-            <Border x:Name="border"  Stroke="WhiteSmoke" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="White" HorizontalOptions="Center" Margin="0" Padding="0">
-                <Grid Background="#f5eeff">
+            <Border x:Name="border" Background="#ACC1D1" Stroke="#D1DAE7"  StrokeShape="RoundRectangle 10,10,10,10"  HorizontalOptions="Center" Margin="0" Padding="0">
+                <Grid >
                     <Grid.RowDefinitions>
                         <RowDefinition Height="0.2*"/>
                         <RowDefinition Height="0.25*"/>
@@ -22,7 +22,7 @@
                     </Grid.RowDefinitions>
                     <VerticalStackLayout>
                         <Grid Padding="10" ColumnDefinitions="0.3*,0.7*" >
-                            <ImageButton InputTransparent="True" Background="#f5eeff" VerticalOptions="Start" Source="{Binding Image}" Padding="10" HeightRequest="80" WidthRequest="80"/>
+                            <ImageButton InputTransparent="True" Background="#D1DAE7" VerticalOptions="Start" Source="{Binding Image}" Padding="10" HeightRequest="80" WidthRequest="80"/>
                             <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" >
                                 <Label Text="{Binding Name}" FontAttributes="Bold"  />
                                 <Label Text="{Binding Department}"  />

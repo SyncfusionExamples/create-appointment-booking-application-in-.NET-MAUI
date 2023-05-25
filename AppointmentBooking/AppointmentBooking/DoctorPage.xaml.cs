@@ -51,7 +51,7 @@ namespace AppointmentBooking
 
         private void CheckDoctorAvailability()
         {
-            if (this.SelectedDate == DateTime.Now.Date)
+            if (this.SelectedDate == DateTime.Now.Date.AddDays(1))
             {
                 this.NoDoctors.IsVisible = true;
                 this.listView.IsVisible = false;
@@ -74,6 +74,11 @@ namespace AppointmentBooking
         {
             App.Current.MainPage = new NavigationPage();
             App.Current.MainPage.Navigation.PushAsync(new AppShell());
+        }
+
+        private void calendar_ActionButtonCanceled(object sender, EventArgs e)
+        {
+            this.popup.IsOpen = false;
         }
     }
 }
