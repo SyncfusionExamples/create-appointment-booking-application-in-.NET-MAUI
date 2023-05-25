@@ -13,9 +13,9 @@
         </Grid>
         <Grid Grid.Row="1" RowDefinitions="0.1*,0.9*" VerticalOptions="Start">
             <Grid ColumnDefinitions="auto,*">
-            <Label Text="Check doctors availability" VerticalOptions="Center" HorizontalOptions="Start" Padding="10" FontSize="16" FontAttributes="Bold" TextColor="Black"/>
+            <Label Text="Check doctors availability" VerticalOptions="Center" HorizontalOptions="Center" Padding="10" FontSize="16" FontAttributes="Bold" TextColor="Black"/>
 
-            <VerticalStackLayout Grid.Column="1" VerticalOptions="Start"  HorizontalOptions="Center">
+            <VerticalStackLayout Grid.Column="1" VerticalOptions="Start" Margin="0,0,20,0" HorizontalOptions="End">
                 <Label Text="Select a date" FontAttributes="Bold" VerticalOptions="Start" HorizontalOptions="Center" TextColor="Black"/>
                     <Button x:Name="CalendarButton" HeightRequest="35" Padding="8"  BorderColor="{StaticResource Primary}"
                 HorizontalOptions="Center" 
