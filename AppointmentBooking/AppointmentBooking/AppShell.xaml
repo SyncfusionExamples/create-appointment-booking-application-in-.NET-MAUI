@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:AppointmentBooking" WidthRequest="350" 
    Shell.FlyoutBehavior="{OnPlatform Android=Flyout,WinUI=Locked,MacCatalyst=Locked,iOS=Flyout}" Shell.FlyoutItemIsVisible="True"  >
 
-    <FlyoutItem Title="Home"  >
+    <FlyoutItem Title="Doctors"  >
         <ShellContent  ContentTemplate="{DataTemplate local:MainPage}" Route="home" />
     </FlyoutItem>
   
