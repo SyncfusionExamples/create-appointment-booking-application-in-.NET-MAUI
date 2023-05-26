@@ -5,7 +5,7 @@
              NavigationPage.HasNavigationBar="False" NavigationPage.HasBackButton="true"
              xmlns:local="clr-namespace:AppointmentBooking" WidthRequest="400"
                xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar"
-              xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+              xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView" 
              x:Class="AppointmentBooking.DoctorPage">
     <Grid RowDefinitions="auto,0.9*">
         <Grid  VerticalOptions="Start" Background="{StaticResource Primary}">
@@ -64,13 +64,13 @@
                    ItemsSource="{Binding DoctorInfo}"   ItemSize="160" >
                     <listView:SfListView.ItemTemplate>
                         <DataTemplate>
-                            <VerticalStackLayout IsClippedToBounds="True" Background="#D1DAE7" Margin="5">
+                            <VerticalStackLayout IsClippedToBounds="True" Background="#3082D1" Margin="5">
                                 <Grid Padding="10" ColumnDefinitions="0.3*,0.7*" >
-                                    <ImageButton InputTransparent="True" VerticalOptions="Start" HorizontalOptions="Center" Background="#D1DAE7" Source="{Binding Image}" HeightRequest="80" WidthRequest="80"/>
+                                    <ImageButton InputTransparent="True" CornerRadius="5" VerticalOptions="Start" HorizontalOptions="Center" Background="#3082D1" Source="{Binding Image}" HeightRequest="80" WidthRequest="80"/>
                                     <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" >
-                                        <Label Text="{Binding Name}" FontAttributes="Bold"  />
-                                        <Label Text="{Binding Department}"  />
-                                        <Label Text="{Binding Details}"  />
+                                        <Label Text="{Binding Name}" TextColor="white" FontAttributes="Bold"  />
+                                        <Label Text="{Binding Department}" TextColor="White"  />
+                                        <Label Text="{Binding Details}" TextColor="White" />
                                     </VerticalStackLayout>
                                 </Grid>
                                 <Button VerticalOptions="Center" CornerRadius="5" HorizontalOptions="Start" Margin="10,0" Text="Book hospital visit" BindingContext="{Binding}" Clicked="Button_Clicked" />
