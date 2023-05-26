@@ -22,19 +22,19 @@
              HorizontalOptions="Fill" />
             </VerticalStackLayout>
             </Grid>
-            <Grid  Grid.Row="1" x:Name="listGrid" Background="#D1DAE7" >
+            <Grid  Grid.Row="1" x:Name="listGrid" Background="#f8f7ff" >
                 <Label  x:Name="noAppointment" FontAttributes="Bold" VerticalOptions="Center"  HorizontalOptions="Center" Margin="20" Text="No upcoming hospital visit."/>
                 <listView:SfListView x:Name="listView" Grid.Row="1" VerticalOptions="Start"     
                      ItemSize="100" >
                     <listView:SfListView.ItemTemplate>
                         <DataTemplate>
-                            <VerticalStackLayout Background="#3082D1" IsClippedToBounds="True"  Margin="5">
+                            <VerticalStackLayout Background="#b8b8ff" IsClippedToBounds="True"  Margin="5">
                                 <Grid Padding="5" ColumnDefinitions="0.2*,0.8*">
-                                    <ImageButton InputTransparent="True" VerticalOptions="Start" Background="#3082D1" Source="{Binding Image}" Padding="10" HeightRequest="80" WidthRequest="80"/>
+                                    <ImageButton InputTransparent="True" VerticalOptions="Start" Background="#b8b8ff" Source="{Binding Image}" Padding="10" HeightRequest="80" WidthRequest="80"/>
                                     <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" >
-                                        <Label Text="{Binding Name}" FontAttributes="Bold"  TextColor="White" />
-                                        <Label Text="{Binding Department}"  TextColor="White" />
-                                        <Label  TextColor="White">
+                                        <Label Text="{Binding Name}" FontAttributes="Bold"  TextColor="Black" />
+                                        <Label Text="{Binding Department}"  TextColor="Black" />
+                                        <Label  TextColor="Black">
                                             <Label.FormattedText>
                                                 <FormattedString>
                                                     <Span Text="Appointment Time: "/>

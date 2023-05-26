@@ -111,6 +111,7 @@ namespace AppointmentBooking
             string dayText = dateTime.ToString("MMMM" + " " + dateTime.Day.ToString() + ", " + dateTime.ToString("yyyy"), CultureInfo.CurrentUICulture);
             string text = "Appointment booked for " + dayText + " " + timeSlot;
             popup.Message = text;
+            popup.Background = Color.FromArgb("#b8b8ff");
             popup.Show();
 
             await Task.Delay(1000);

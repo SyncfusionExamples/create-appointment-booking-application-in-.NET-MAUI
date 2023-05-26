@@ -4,13 +4,13 @@
                xmlns:popup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
              xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar"
              xmlns:local="clr-namespace:AppointmentBooking"  
- Background="#D1DAE7">
+ Background="#f8f7ff">
     <Grid RowDefinitions="auto,0.9*">
-        <Grid  VerticalOptions="Start" Background="{StaticResource Primary}">
+        <Grid  VerticalOptions="Start" Background="#9381ff">
             <Button Text="Back"  HorizontalOptions="Start" Padding="10" TextColor="White" VerticalOptions="Center" Clicked="Button_Clicked"/>
         </Grid>
         <Grid Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="500" WidthRequest="350">
-            <Border x:Name="border" Background="#B3CEE3" Stroke="#D1DAE7"  StrokeShape="RoundRectangle 10,10,10,10"  HorizontalOptions="Center" Margin="0" Padding="0">
+            <Border x:Name="border" Background="#b8b8ff" Stroke="#D1DAE7"  StrokeShape="RoundRectangle 10,10,10,10"  HorizontalOptions="Center" Margin="0" Padding="0">
                 <Grid >
                     <Grid.RowDefinitions>
                         <RowDefinition Height="0.2*"/>
@@ -21,7 +21,7 @@
                     </Grid.RowDefinitions>
                     <VerticalStackLayout>
                         <Grid Padding="10" ColumnDefinitions="0.3*,0.7*" >
-                            <ImageButton InputTransparent="True" Background="#B3CEE3" VerticalOptions="Start" Source="{Binding Image}" Padding="10" HeightRequest="80" WidthRequest="80"/>
+                            <ImageButton InputTransparent="True" Background="#b8b8ff" VerticalOptions="Start" Source="{Binding Image}" Padding="10" HeightRequest="80" WidthRequest="80"/>
                             <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" >
                                 <Label Text="{Binding Name}" FontAttributes="Bold"  />
                                 <Label Text="{Binding Department}"  />
@@ -64,7 +64,7 @@
                         </FlexLayout>
                     </Grid>
                     <Grid Grid.Row="4">
-                        <Button Text="Book Appointment" BackgroundColor="#6200EE" HorizontalOptions="Center" Clicked="AppointmentBooking" VerticalOptions="Center" WidthRequest="160"/>
+                        <Button Text="Book Appointment" BackgroundColor="#9381ff" TextColor="White" HorizontalOptions="Center" Clicked="AppointmentBooking" VerticalOptions="Center" WidthRequest="160"/>
                     </Grid>
                     <popup:SfPopup x:Name="popup"/>
                 </Grid>
