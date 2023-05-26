@@ -64,9 +64,9 @@
                    ItemsSource="{Binding DoctorInfo}"   ItemSize="160" >
                     <listView:SfListView.ItemTemplate>
                         <DataTemplate>
-                            <VerticalStackLayout IsClippedToBounds="True" Background="#3082D1" Margin="5">
+                            <VerticalStackLayout IsClippedToBounds="True" Background="#0084D1" Margin="5">
                                 <Grid Padding="10" ColumnDefinitions="0.3*,0.7*" >
-                                    <ImageButton InputTransparent="True" CornerRadius="5" VerticalOptions="Start" HorizontalOptions="Center" Background="#3082D1" Source="{Binding Image}" HeightRequest="80" WidthRequest="80"/>
+                                    <ImageButton InputTransparent="True" CornerRadius="5" VerticalOptions="Start" HorizontalOptions="Center" Background="#0084D1" Source="{Binding Image}" HeightRequest="80" WidthRequest="80"/>
                                     <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" >
                                         <Label Text="{Binding Name}" TextColor="white" FontAttributes="Bold"  />
                                         <Label Text="{Binding Department}" TextColor="White"  />
