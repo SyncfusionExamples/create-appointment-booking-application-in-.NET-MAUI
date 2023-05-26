@@ -73,7 +73,7 @@
                                         <Label Text="{Binding Details}" TextColor="White" />
                                     </VerticalStackLayout>
                                 </Grid>
-                                <Button VerticalOptions="Center" CornerRadius="5" HorizontalOptions="Start" Margin="10,0" Text="Book hospital visit" BindingContext="{Binding}" Clicked="Button_Clicked" />
+                                <Button VerticalOptions="Center" Background="#5356B5" CornerRadius="5" HorizontalOptions="Start" Margin="10,0" Text="Book hospital visit" BindingContext="{Binding}" Clicked="Button_Clicked" />
                             </VerticalStackLayout>
                         </DataTemplate>
                     </listView:SfListView.ItemTemplate>
