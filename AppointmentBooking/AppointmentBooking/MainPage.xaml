@@ -5,63 +5,63 @@
     <Grid RowDefinitions="0.1*,0.9*" Background="#b8b8ff"  WidthRequest="500" HeightRequest="560" HorizontalOptions="Center" VerticalOptions="Center">
         <Label Text="Select Specialists" FontSize="16" Margin="10" Padding="20,10" VerticalOptions="Start" FontAttributes="Bold"/>
         <Grid Grid.Row="1" ColumnDefinitions="*,*,*" Margin="0,0,0,30"  RowDefinitions="0.3*,0.3*,0.3*">
-            <Border VerticalOptions="Center"  Stroke="#f8f7ff" Background="#f8f7ff" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="White" HorizontalOptions="Center" Margin="0" Padding="0">
+            <Border VerticalOptions="Center"  Stroke="#f8f7ff" Background="#f8f7ff" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10"  HorizontalOptions="Center" Margin="0" Padding="0">
             <VerticalStackLayout Margin="10">
                     <ImageButton AutomationId="General"  x:Name="General" VerticalOptions="Start" Source="general.png" Clicked="ImageButton_Clicked" HeightRequest="100" WidthRequest="90" />
                 <Label Text="Physician"  HorizontalOptions="Center"/>
             </VerticalStackLayout>
         </Border>
 
-        <Border VerticalOptions="Center"  Stroke="WhiteSmoke" Grid.Row="0" Grid.Column="1" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="White" HorizontalOptions="Center" Margin="0" Padding="0">
+            <Border VerticalOptions="Center"  Stroke="#f8f7ff" Background="#f8f7ff"  Grid.Row="0" Grid.Column="1" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10"  HorizontalOptions="Center" Margin="0" Padding="0">
             <VerticalStackLayout Margin="10">
                     <ImageButton AutomationId="skin" VerticalOptions="Start" Source="skin.png" Clicked="ImageButton_Clicked" HeightRequest="100" WidthRequest="90" />
                     <Label Text="Skin Specialist" HorizontalOptions="Center"/>
             </VerticalStackLayout>
         </Border>
 
-        <Border VerticalOptions="Center"  Stroke="WhiteSmoke" Grid.Row="0" Grid.Column="2" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="White" HorizontalOptions="Center" Margin="0" Padding="0">
+            <Border VerticalOptions="Center" Stroke="#f8f7ff" Background="#f8f7ff"  Grid.Row="0" Grid.Column="2" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10"  HorizontalOptions="Center" Margin="0" Padding="0">
             <VerticalStackLayout Margin="10">
                     <ImageButton AutomationId="cardiology" VerticalOptions="Start" Source="cardiology.png" Clicked="ImageButton_Clicked" HeightRequest="100" WidthRequest="90" />
                     <Label Text="Cardiology" HorizontalOptions="Center" />
             </VerticalStackLayout>
         </Border>
 
-        <Border VerticalOptions="Center"  Stroke="WhiteSmoke" Grid.Row="1" Grid.Column="0" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="White" HorizontalOptions="Center" Margin="0" Padding="0">
+            <Border VerticalOptions="Center"  Stroke="#f8f7ff" Background="#f8f7ff" Grid.Row="1" Grid.Column="0" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10"  HorizontalOptions="Center" Margin="0" Padding="0">
             <VerticalStackLayout Margin="10">
                     <ImageButton AutomationId="neurology" VerticalOptions="Start" Source="neurology.png" Clicked="ImageButton_Clicked" HeightRequest="100" WidthRequest="90" />
                     <Label Text="Neurology"  HorizontalOptions="Center"/>
             </VerticalStackLayout>
         </Border>
 
-        <Border VerticalOptions="Center"  Stroke="WhiteSmoke" Grid.Row="1" Grid.Column="1" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="White" HorizontalOptions="Center" Margin="0" Padding="0">
+            <Border VerticalOptions="Center"  Stroke="#f8f7ff" Background="#f8f7ff"  Grid.Row="1" Grid.Column="1" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10"  HorizontalOptions="Center" Margin="0" Padding="0">
             <VerticalStackLayout Margin="10">
                     <ImageButton AutomationId="pediatrician" VerticalOptions="Start" Source="pediatrician.png" Clicked="ImageButton_Clicked" HeightRequest="100" WidthRequest="90" />
                     <Label Text="Pediatrician"  HorizontalOptions="Center" />
             </VerticalStackLayout>
         </Border>
 
-        <Border VerticalOptions="Center"   Stroke="WhiteSmoke" Grid.Row="1" Grid.Column="2" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="White" HorizontalOptions="Center" Margin="0" Padding="0">
+            <Border VerticalOptions="Center" Stroke="#f8f7ff" Background="#f8f7ff"  Grid.Row="1" Grid.Column="2" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10"  HorizontalOptions="Center" Margin="0" Padding="0">
             <VerticalStackLayout Margin="10">
                     <ImageButton AutomationId="eye" VerticalOptions="Start" Source="eye.png" Clicked="ImageButton_Clicked" HeightRequest="100" WidthRequest="90" />
                     <Label Text="Eye Specialist"  HorizontalOptions="Center" />
             </VerticalStackLayout>
         </Border>
 
-        <Border VerticalOptions="Center"  Stroke="WhiteSmoke" Grid.Row="2" Grid.Column="0" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="White" HorizontalOptions="Center" Margin="0" Padding="0">
+            <Border VerticalOptions="Center" Stroke="#f8f7ff" Background="#f8f7ff"  Grid.Row="2" Grid.Column="0" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10"  HorizontalOptions="Center" Margin="0" Padding="0">
             <VerticalStackLayout Margin="10">
                     <ImageButton AutomationId="dermatologist" VerticalOptions="Start" Source="dermatologist.png" Clicked="ImageButton_Clicked" HeightRequest="100" WidthRequest="90" />
                     <Label Text="Dermatologist"  HorizontalOptions="Center"/>
             </VerticalStackLayout>
         </Border>
 
-        <Border VerticalOptions="Center"  Stroke="WhiteSmoke" Grid.Row="2" Grid.Column="1" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="White" HorizontalOptions="Center" Margin="0" Padding="0">
+            <Border VerticalOptions="Center" Stroke="#f8f7ff" Background="#f8f7ff"  Grid.Row="2" Grid.Column="1" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10"  HorizontalOptions="Center" Margin="0" Padding="0">
             <VerticalStackLayout Margin="10">
                     <ImageButton AutomationId="psychiatrist" VerticalOptions="Start" Source="psychiatrist.png" Clicked="ImageButton_Clicked" HeightRequest="100" WidthRequest="90" />
                     <Label Text="Psychiatrist"  HorizontalOptions="Center"/>
             </VerticalStackLayout>
         </Border>
 
-        <Border VerticalOptions="Center"   Stroke="WhiteSmoke" Grid.Row="2" Grid.Column="2" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="White" HorizontalOptions="Center" Margin="0" Padding="0">
+            <Border VerticalOptions="Center" Stroke="#f8f7ff" Background="#f8f7ff"  Grid.Row="2" Grid.Column="2" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10"  HorizontalOptions="Center" Margin="0" Padding="0">
             <VerticalStackLayout Margin="10">
                     <ImageButton AutomationId="gynecologist" VerticalOptions="Start" Source="gynecologist.png" Clicked="ImageButton_Clicked" HeightRequest="100" WidthRequest="90" />
                     <Label Text="Gynecologist"  HorizontalOptions="Center" />

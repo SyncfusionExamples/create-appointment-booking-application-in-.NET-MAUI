@@ -15,9 +15,8 @@
             <Grid ColumnDefinitions="auto,*">
             <Label Text="Check doctors availability" VerticalOptions="Center" HorizontalOptions="Center" Padding="10" FontSize="16" FontAttributes="Bold" TextColor="Black"/>
 
-            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Margin="0,0,20,0" HorizontalOptions="End">
-                    <Button x:Name="CalendarButton" HeightRequest="35" Padding="8"  BorderColor="{StaticResource Primary}"
-                HorizontalOptions="Center" 
+                    <Button x:Name="CalendarButton" Grid.Column="1" HeightRequest="35" Padding="8"  BorderColor="{StaticResource Primary}"
+                HorizontalOptions="Start" 
                 VerticalOptions="Center" TextColor="Black"
                 Text="Show Calendar"
                 Clicked="CalendarButton_Clicked">
@@ -33,14 +32,14 @@
                                 <VisualState x:Name="PointerOver">
                                     <VisualState.Setters>
                                         <Setter Property="TextColor" Value="White" />
-                                        <Setter Property="Background" Value="{StaticResource Primary}" />
+                                    <Setter Property="Background" Value="#9381ff" />
                                     </VisualState.Setters>
                                 </VisualState>
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
                     </Button>
                 <popup:SfPopup x:Name="popup"  ShowCloseButton="False" ShowFooter="False" ShowHeader="False"
-                       HeightRequest="380"  >
+                       HeightRequest="380"  Padding="0" >
                     <popup:SfPopup.ContentTemplate>
                         <DataTemplate>
                             <calendar:SfCalendar MinimumDate="{Binding MinimumDate}" MaximumDate="{Binding MaximumDate}" ActionButtonClicked="calendar_ActionButtonClicked" ActionButtonCanceled="calendar_ActionButtonCanceled" SelectionChanged="calendar_SelectionChanged" SelectionMode="Single"
@@ -55,7 +54,6 @@
                     </popup:SfPopup.PopupStyle>
                 </popup:SfPopup>
 
-            </VerticalStackLayout>
             </Grid>
             <Grid Grid.Row="1"  >
                 <Label x:Name="NoDoctors" Text="Looks like there is no doctor available, please change date." TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center"/>

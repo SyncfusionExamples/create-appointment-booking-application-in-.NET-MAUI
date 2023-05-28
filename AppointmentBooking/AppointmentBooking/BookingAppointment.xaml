@@ -30,7 +30,7 @@
                         </Grid>
 
                     </VerticalStackLayout>
-                    <calendar:SfCalendar Grid.Row="1" Background="white" x:Name="appointmentBooking" EnablePastDates="False" AllowViewNavigation="False" SelectionChanged="AppointmentBooking_SelectionChanged" BackgroundColor="White" NavigationDirection="Horizontal">
+                    <calendar:SfCalendar Grid.Row="1" Background="white" TodayHighlightBrush="#9381ff" SelectionBackground="#9381ff" x:Name="appointmentBooking" EnablePastDates="False" AllowViewNavigation="False" SelectionChanged="AppointmentBooking_SelectionChanged" BackgroundColor="White" NavigationDirection="Horizontal">
                         <calendar:SfCalendar.HeaderView>
                             <calendar:CalendarHeaderView Background="white"/>
                         </calendar:SfCalendar.HeaderView>
