@@ -8,16 +8,16 @@
               xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView" 
              x:Class="AppointmentBooking.DoctorPage">
     <Grid RowDefinitions="auto,0.9*" Background="#f8f7ff">
-        <Grid  VerticalOptions="Start" HeightRequest="30" Background="#9381FF">
-            <ImageButton Source="back.png" Background="#9381FF" Padding="5,0"  HorizontalOptions="Start"  VerticalOptions="Start"  Clicked="Button_Clicked_1"/>
+        <Grid  VerticalOptions="Start" HeightRequest="35" Background="#9381FF">
+            <ImageButton Source="back.png" WidthRequest="30" Background="#9381FF"  HorizontalOptions="Start"  VerticalOptions="Start"  Clicked="Button_Clicked_1"/>
         </Grid>
         <Grid Grid.Row="1" RowDefinitions="0.1*,0.9*" VerticalOptions="Start">
             <Grid ColumnDefinitions="auto,*">
             <Label Text="Check doctors availability" VerticalOptions="Center" HorizontalOptions="Center" Padding="10" FontSize="16" FontAttributes="Bold" TextColor="Black"/>
 
                     <Button x:Name="CalendarButton" Grid.Column="1" HeightRequest="35" Padding="8"  BorderColor="{StaticResource Primary}"
-                HorizontalOptions="Start" 
-                VerticalOptions="Center" TextColor="Black"
+                HorizontalOptions="Start" Background="{OnPlatform Android=#9381ff,iOS=#9381ff,WinUI=White,MacCatalyst=White}"
+                VerticalOptions="Center" TextColor="{OnPlatform Android=White,iOS=White,WinUI=Black,MacCatalyst=Black}"
                 Text="Show Calendar"
                 Clicked="CalendarButton_Clicked">
                         <VisualStateManager.VisualStateGroups>
@@ -42,7 +42,7 @@
                        HeightRequest="380"  Padding="0" >
                     <popup:SfPopup.ContentTemplate>
                         <DataTemplate>
-                            <calendar:SfCalendar MinimumDate="{Binding MinimumDate}" SelectedDate="{Binding SelectedDate}" MaximumDate="{Binding MaximumDate}" ActionButtonClicked="calendar_ActionButtonClicked" ActionButtonCanceled="calendar_ActionButtonCanceled" SelectionChanged="calendar_SelectionChanged" SelectionMode="Single"
+                            <calendar:SfCalendar TodayHighlightBrush="#9381ff" SelectionBackground="#9381ff" MinimumDate="{Binding MinimumDate}" SelectedDate="{Binding SelectedDate}" MaximumDate="{Binding MaximumDate}" ActionButtonClicked="calendar_ActionButtonClicked" ActionButtonCanceled="calendar_ActionButtonCanceled" SelectionChanged="calendar_SelectionChanged" SelectionMode="Single"
                                                 WidthRequest="300" VerticalOptions="Start" HorizontalOptions="Center"
                                                  HeightRequest="360"
                              x:Name="calendar"

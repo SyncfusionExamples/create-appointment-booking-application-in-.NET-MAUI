@@ -6,8 +6,8 @@
              xmlns:local="clr-namespace:AppointmentBooking"  
  Background="#f8f7ff">
     <Grid RowDefinitions="auto,0.9*">
-        <Grid  VerticalOptions="Start" HeightRequest="30" Background="#9381ff">
-            <ImageButton Source="back.png" Background="#9381ff" Padding="5,0"  HorizontalOptions="Start"  VerticalOptions="Center" Clicked="Button_Clicked"/>
+        <Grid  VerticalOptions="Start" HeightRequest="35" Background="#9381ff">
+            <ImageButton Source="back.png" WidthRequest="30" Background="#9381ff" HorizontalOptions="Start"  VerticalOptions="Center" Clicked="Button_Clicked"/>
         </Grid>
         <Grid Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="500" WidthRequest="350">
             <Border x:Name="border" Background="#b8b8ff" Stroke="#D1DAE7"  StrokeShape="RoundRectangle 10,10,10,10"  HorizontalOptions="Center" Margin="0" Padding="0">
