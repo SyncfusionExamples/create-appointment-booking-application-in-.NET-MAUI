@@ -9,15 +9,15 @@
              x:Class="AppointmentBooking.DoctorPage">
     <Grid RowDefinitions="auto,0.9*" Background="#f8f7ff">
         <Grid  VerticalOptions="Start" HeightRequest="35" Background="#9381FF">
-            <ImageButton Source="back.png" WidthRequest="30" Background="#9381FF"  HorizontalOptions="Start"  VerticalOptions="Start"  Clicked="Button_Clicked_1"/>
+            <ImageButton Source="back.png" WidthRequest="30"  Background="#9381FF" Margin="10,0,0,0" HorizontalOptions="Start"  VerticalOptions="Center"  Clicked="Button_Clicked_1"/>
         </Grid>
         <Grid Grid.Row="1" RowDefinitions="0.1*,0.9*" VerticalOptions="Start">
             <Grid ColumnDefinitions="auto,*">
             <Label Text="Check doctors availability" VerticalOptions="Center" HorizontalOptions="Center" Padding="10" FontSize="16" FontAttributes="Bold" TextColor="Black"/>
 
                     <Button x:Name="CalendarButton" Grid.Column="1" HeightRequest="35" Padding="8"  BorderColor="{StaticResource Primary}"
-                HorizontalOptions="Start" Background="{OnPlatform Android=#9381ff,iOS=#9381ff,WinUI=White,MacCatalyst=White}"
-                VerticalOptions="Center" TextColor="{OnPlatform Android=White,iOS=White,WinUI=Black,MacCatalyst=Black}"
+                HorizontalOptions="Start" Background="{OnIdiom Phone=#9381ff, Default= white}"
+                VerticalOptions="Center" TextColor="{OnIdiom Phone=White, Default=black}"
                 Text="Show Calendar"
                 Clicked="CalendarButton_Clicked">
                         <VisualStateManager.VisualStateGroups>
