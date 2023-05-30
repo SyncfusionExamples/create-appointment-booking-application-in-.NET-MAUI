@@ -29,8 +29,8 @@
                     <listView:SfListView.ItemTemplate>
                         <DataTemplate>
                             <VerticalStackLayout Background="#b8b8ff" IsClippedToBounds="True"  Margin="5">
-                                <Grid Padding="5" ColumnDefinitions="0.2*,0.8*">
-                                    <ImageButton InputTransparent="True" VerticalOptions="Start" Background="#b8b8ff" Source="{Binding Image}" Padding="10" HeightRequest="80" WidthRequest="80"/>
+                                <Grid Padding="5" ColumnDefinitions="0.3*,0.7*">
+                                    <ImageButton InputTransparent="True" VerticalOptions="Start" Background="#b8b8ff" Source="{Binding Image}"  HeightRequest="80" WidthRequest="80"/>
                                     <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" >
                                         <Label Text="{Binding Name}" FontAttributes="Bold"  TextColor="Black" />
                                         <Label Text="{Binding Department}"  TextColor="Black" />

@@ -21,7 +21,7 @@
                     </Grid.RowDefinitions>
                     <VerticalStackLayout>
                         <Grid Padding="10" ColumnDefinitions="0.3*,0.7*" >
-                            <ImageButton InputTransparent="True" Background="#b8b8ff" VerticalOptions="Start" Source="{Binding Image}" Padding="10" HeightRequest="80" WidthRequest="80"/>
+                            <ImageButton InputTransparent="True" Background="#b8b8ff" VerticalOptions="Start" Source="{Binding Image}" HeightRequest="80" WidthRequest="80"/>
                             <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" >
                                 <Label Text="{Binding Name}" FontAttributes="Bold"  />
                                 <Label Text="{Binding Department}"  />
