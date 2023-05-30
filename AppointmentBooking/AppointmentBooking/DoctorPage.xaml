@@ -9,7 +9,7 @@
              x:Class="AppointmentBooking.DoctorPage">
     <Grid RowDefinitions="auto,0.9*" Background="#f8f7ff">
         <Grid  VerticalOptions="Start" HeightRequest="30" Background="#9381FF">
-            <ImageButton Source="back.png"  HorizontalOptions="Start"  VerticalOptions="Start"  Clicked="Button_Clicked_1"/>
+            <ImageButton Source="back.png" Background="#9381FF" Padding="5,0"  HorizontalOptions="Start"  VerticalOptions="Start"  Clicked="Button_Clicked_1"/>
         </Grid>
         <Grid Grid.Row="1" RowDefinitions="0.1*,0.9*" VerticalOptions="Start">
             <Grid ColumnDefinitions="auto,*">

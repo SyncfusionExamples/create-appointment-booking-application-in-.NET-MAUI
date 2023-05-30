@@ -49,8 +49,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\appointment.png" />
+	  <None Remove="Resources\Images\back.png" />
 	  <None Remove="Resources\Images\Cardiology.png" />
 	  <None Remove="Resources\Images\dermatologist.png" />
+	  <None Remove="Resources\Images\doctor.png" />
 	  <None Remove="Resources\Images\eye.png" />
 	  <None Remove="Resources\Images\general.png" />
 	  <None Remove="Resources\Images\gynecologist.png" />
