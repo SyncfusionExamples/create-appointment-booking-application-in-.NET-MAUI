@@ -31,6 +31,7 @@ namespace AppointmentBooking
 
         private void calendar_ActionButtonClicked(object sender, Syncfusion.Maui.Calendar.CalendarSubmittedEventArgs e)
         {
+            this.CalendarButton.Text = this.SelectedDate.ToString("yyyy'/'MM'/'dd");
             CheckDoctorAvailability();
             this.popup.IsOpen = false;
         }
@@ -40,11 +41,10 @@ namespace AppointmentBooking
             var calendar = sender as SfCalendar;
             if (e.NewValue == null)
             {
-                this.CalendarButton.Text = ((DateTime)e.OldValue).ToString("yyyy'/'MM'/'dd");
+                this.SelectedDate = (DateTime)e.OldValue;
             }
             else
             {
-                this.CalendarButton.Text = ((DateTime)e.NewValue).ToString("yyyy'/'MM'/'dd");
                 this.SelectedDate = (DateTime)calendar.SelectedDate;
             }
         }
@@ -78,6 +78,7 @@ namespace AppointmentBooking
 
         private void calendar_ActionButtonCanceled(object sender, EventArgs e)
         {
+            this.CalendarButton.Text = this.SelectedDate.ToString("yyyy'/'MM'/'dd");
             this.popup.IsOpen = false;
         }
     }

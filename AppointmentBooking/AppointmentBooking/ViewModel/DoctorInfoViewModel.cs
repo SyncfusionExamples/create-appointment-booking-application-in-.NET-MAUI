@@ -15,6 +15,8 @@ namespace AppointmentBooking
 
         public DateTime MaximumDate { get; set; } = DateTime.Now.Date.AddDays(7);
 
+        public DateTime SelectedDate { get; set; } = DateTime.Now.Date;
+
         public DoctorInfoRepository(string specialist)
         {
             string department = "";

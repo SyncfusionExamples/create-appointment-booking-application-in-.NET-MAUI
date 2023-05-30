@@ -42,7 +42,7 @@
                        HeightRequest="380"  Padding="0" >
                     <popup:SfPopup.ContentTemplate>
                         <DataTemplate>
-                            <calendar:SfCalendar MinimumDate="{Binding MinimumDate}" MaximumDate="{Binding MaximumDate}" ActionButtonClicked="calendar_ActionButtonClicked" ActionButtonCanceled="calendar_ActionButtonCanceled" SelectionChanged="calendar_SelectionChanged" SelectionMode="Single"
+                            <calendar:SfCalendar MinimumDate="{Binding MinimumDate}" SelectedDate="{Binding SelectedDate}" MaximumDate="{Binding MaximumDate}" ActionButtonClicked="calendar_ActionButtonClicked" ActionButtonCanceled="calendar_ActionButtonCanceled" SelectionChanged="calendar_SelectionChanged" SelectionMode="Single"
                                                 WidthRequest="300" VerticalOptions="Start" HorizontalOptions="Center"
                                                  HeightRequest="360"
                              x:Name="calendar"
