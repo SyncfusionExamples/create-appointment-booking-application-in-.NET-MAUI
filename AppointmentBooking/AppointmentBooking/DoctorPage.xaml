@@ -8,8 +8,8 @@
               xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView" 
              x:Class="AppointmentBooking.DoctorPage">
     <Grid RowDefinitions="auto,0.9*" Background="#f8f7ff">
-        <Grid  VerticalOptions="Start" Background="#9381ff">
-            <Button Text="Back" HorizontalOptions="Start" Padding="10" TextColor="White" VerticalOptions="Start"  Clicked="Button_Clicked_1"/>
+        <Grid  VerticalOptions="Start" HeightRequest="30" Background="#9381FF">
+            <ImageButton Source="back.png"  HorizontalOptions="Start"  VerticalOptions="Start"  Clicked="Button_Clicked_1"/>
         </Grid>
         <Grid Grid.Row="1" RowDefinitions="0.1*,0.9*" VerticalOptions="Start">
             <Grid ColumnDefinitions="auto,*">
