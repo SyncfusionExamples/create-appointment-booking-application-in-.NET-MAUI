@@ -111,14 +111,13 @@ namespace AppointmentBooking
             string dayText = dateTime.ToString("MMMM" + " " + dateTime.Day.ToString() + ", " + dateTime.ToString("yyyy"), CultureInfo.CurrentUICulture);
             string text = "Appointment booked for " + dayText + " " + timeSlot;
             popup.Message = text;
-            popup.Background = Color.FromArgb("#b8b8ff");
             popup.Show();
 
             await Task.Delay(1000);
             popup.IsOpen = false;
 
             var doctorInfo = this.BindingContext as DoctorInfo;
-            doctorInfo.AppointmentTime = dateTime;
+            doctorInfo.AppointmentTime = Convert.ToDateTime(dayText + " " + timeSlot); ;
             App.Appointments.Appointments.Add(doctorInfo);
 
             App.Current.MainPage = new NavigationPage();
