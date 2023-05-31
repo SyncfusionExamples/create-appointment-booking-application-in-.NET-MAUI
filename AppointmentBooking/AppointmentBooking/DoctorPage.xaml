@@ -39,12 +39,12 @@
                         </VisualStateManager.VisualStateGroups>
                     </Button>
                 <popup:SfPopup x:Name="popup"  ShowCloseButton="False" ShowFooter="False" ShowHeader="False"
-                       HeightRequest="380"  Padding="0" >
+                      WidthRequest="280" HeightRequest="350" >
                     <popup:SfPopup.ContentTemplate>
                         <DataTemplate>
-                            <calendar:SfCalendar TodayHighlightBrush="#9381ff" SelectionBackground="#9381ff" MinimumDate="{Binding MinimumDate}" SelectedDate="{Binding SelectedDate}" MaximumDate="{Binding MaximumDate}" ActionButtonClicked="calendar_ActionButtonClicked" ActionButtonCanceled="calendar_ActionButtonCanceled" SelectionChanged="calendar_SelectionChanged" SelectionMode="Single"
-                                                WidthRequest="300" VerticalOptions="Start" HorizontalOptions="Center"
-                                                 HeightRequest="360"
+                            <calendar:SfCalendar TodayHighlightBrush="#9381ff"  Margin="5" SelectionBackground="#9381ff" MinimumDate="{Binding MinimumDate}" SelectedDate="{Binding SelectedDate}" MaximumDate="{Binding MaximumDate}" ActionButtonClicked="calendar_ActionButtonClicked" ActionButtonCanceled="calendar_ActionButtonCanceled" SelectionChanged="calendar_SelectionChanged" SelectionMode="Single"
+                                                WidthRequest="280" VerticalOptions="Start" HorizontalOptions="Center" 
+                                                 HeightRequest="350"
                              x:Name="calendar"
                              ShowActionButtons="True" />
                         </DataTemplate>
@@ -55,9 +55,9 @@
                 </popup:SfPopup>
 
             </Grid>
-            <Grid Grid.Row="1"  >
-                <Label x:Name="NoDoctors" Text="Looks like there is no doctor available, please change date." TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <listView:SfListView x:Name="listView" Margin="5,0,0,0"  VerticalOptions="Start"    
+            <Grid Grid.Row="1" >
+                <Label x:Name="NoDoctors" Margin="0,50,0,0" Text="Looks like there is no doctor available, please change date." TextColor="Black"  HorizontalOptions="Center" VerticalOptions="End"/>
+                    <listView:SfListView x:Name="listView" Margin="5,0,0,0"  VerticalOptions="Start"    
                    ItemsSource="{Binding DoctorInfo}"   ItemSize="160" >
                     <listView:SfListView.ItemTemplate>
                         <DataTemplate>

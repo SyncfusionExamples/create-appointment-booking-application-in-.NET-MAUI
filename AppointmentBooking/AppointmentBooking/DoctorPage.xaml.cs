@@ -26,7 +26,7 @@ namespace AppointmentBooking
 
         private void CalendarButton_Clicked(object sender, EventArgs e)
         {
-            popup.ShowRelativeToView(CalendarButton, PopupRelativePosition.AlignBottom);
+            popup.ShowRelativeToView(CalendarButton, PopupRelativePosition.AlignBottomLeft,100);
         }
 
         private void calendar_ActionButtonClicked(object sender, Syncfusion.Maui.Calendar.CalendarSubmittedEventArgs e)
