@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" Background="#f8f7ff"
              x:Class="AppointmentBooking.MainPage">
-    <Grid RowDefinitions="auto,0.9*" Background="#b8b8ff"  WidthRequest="{OnPlatform WinUI=500,MacCatalyst=500}" HeightRequest="560" HorizontalOptions="Center" VerticalOptions="Center">
+    <Grid RowDefinitions="auto,0.9*" Background="#b8b8ff"  WidthRequest="{OnPlatform WinUI=500,MacCatalyst=500}" HeightRequest="550" HorizontalOptions="Center" VerticalOptions="Center">
         <Label Text="Select Specialists" FontSize="16" Margin="10" Padding="20,10" VerticalOptions="Start" FontAttributes="Bold"/>
         <Grid Grid.Row="1" ColumnDefinitions="*,*,*" Margin="0,0,0,30"  RowDefinitions="0.3*,0.3*,0.3*">
             <Border VerticalOptions="Center"  Stroke="#f8f7ff" Background="#f8f7ff" StrokeThickness="2" StrokeShape="RoundRectangle 10,10,10,10"  HorizontalOptions="Center" Margin="0" Padding="0">

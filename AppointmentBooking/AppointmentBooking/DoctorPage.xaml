@@ -12,10 +12,10 @@
             <ImageButton Source="back.png" WidthRequest="30"  Background="#9381FF" Margin="10,0,0,0" HorizontalOptions="Start"  VerticalOptions="Center"  Clicked="Button_Clicked_1"/>
         </Grid>
         <Grid Grid.Row="1" RowDefinitions="0.1*,0.9*" VerticalOptions="Start">
-            <Grid ColumnDefinitions="auto,*">
+            <HorizontalStackLayout >
             <Label Text="Check doctors availability" VerticalOptions="Center" HorizontalOptions="Center" Padding="10" FontSize="16" FontAttributes="Bold" TextColor="Black"/>
 
-                    <Button x:Name="CalendarButton" Grid.Column="1" HeightRequest="35" Padding="8"  BorderColor="{StaticResource Primary}"
+                    <Button x:Name="CalendarButton" Grid.Column="1" HeightRequest="35"   BorderColor="{StaticResource Primary}"
                 HorizontalOptions="Start" Background="{OnIdiom Phone=#9381ff, Default= white}"
                 VerticalOptions="Center" TextColor="{OnIdiom Phone=White, Default=black}"
                 Text="Show Calendar"
@@ -24,8 +24,8 @@
                             <VisualStateGroup x:Name="CommonStates">
                                 <VisualState x:Name="Normal">
                                     <VisualState.Setters>
-                                        <Setter Property="Background" Value="White" />
-                                        <Setter Property="TextColor" Value="Black" />
+                                    <Setter Property="Background" Value="{OnIdiom Phone=#9381ff, Default= white}" />
+                                    <Setter Property="TextColor" Value="{OnIdiom Phone=White, Default=black}" />
                                     </VisualState.Setters>
                                 </VisualState>
 
@@ -47,14 +47,14 @@
                                                  HeightRequest="350"
                              x:Name="calendar"
                              ShowActionButtons="True" />
-                        </DataTemplate>
+                        </DataTemplate> 
                     </popup:SfPopup.ContentTemplate>
                     <popup:SfPopup.PopupStyle>
                         <popup:PopupStyle  CornerRadius="0"/>
                     </popup:SfPopup.PopupStyle>
                 </popup:SfPopup>
 
-            </Grid>
+            </HorizontalStackLayout>
             <Grid Grid.Row="1" >
                 <Label x:Name="NoDoctors" Margin="0,50,0,0" Text="Looks like there is no doctor available, please change date." TextColor="Black"  HorizontalOptions="Center" VerticalOptions="End"/>
                     <listView:SfListView x:Name="listView" Margin="5,0,0,0"  VerticalOptions="Start"    
