@@ -94,7 +94,6 @@ namespace AppointmentBooking
         {
             Appointments = new ObservableCollection<DoctorInfo>
             {
-                new DoctorInfo() { Name = "Dr. Peter", Department = "Dentist", AppointmentTime = DateTime.Now.Date.AddDays(-1).AddHours(9), Image = "profile2.png" },
                 new DoctorInfo() { Name = "Dr. John", Department = "Dentist", AppointmentTime = DateTime.Now.Date.AddDays(-8).AddHours(11), Image = "profile3.png" }
             };
         }
