@@ -1,1 +1,1 @@
-# create-appointment-booking-application-in-.NET-MAUI
+# Create hospital appointment booking application in .NET MAUI
